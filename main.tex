@@ -1,0 +1,120 @@
+\documentclass[10pt,hidelinks]{article}
+
+\usepackage[margin=0.75in,top=0.75in,footskip=0.5in]{geometry}
+\usepackage{comment}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+% use Unicode characters - try changing the option if you run into troubles with special characters (e.g. umlauts)
+\usepackage[utf8]{inputenc}
+% clean citations
+\usepackage{cite}
+% hyperref makes references clicky. use \url{www.example.com} or \href{www.example.com}{description} to add a clicky url
+\usepackage{nameref,hyperref}
+% line numbers
+%\usepackage[right]{lineno}
+% improves typesetting in LaTeX
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = * }
+% Remove % for double line spacing
+%\usepackage{setspace} 
+%\doublespacing
+
+% use adjustwidth environment to exceed text width (see examples in text)
+\usepackage{changepage}
+% use \textcolor{color}{text} for colored text (e.g. highlight to-do areas)
+\usepackage{color}
+% this is required to include graphics
+\usepackage{graphicx}
+% use for have text wrap around figures
+\usepackage{wrapfig}
+\usepackage{setspace}
+%\doublespacing
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{caption}
+\captionsetup[figure]{font=footnotesize,skip=0pt}
+\usepackage{subcaption} 
+\usepackage{authblk}
+
+
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+     }
+\newcommand{\gp}[]{\textsc{gp }}
+%%%%%%%%%%%%%% TITLE 
+%Title: Should not exceed 25 words and should be specific and informative. Trade marks and proprietary terms are not allowed in the title.
+
+
+%Running title: Should not exceed 50 characters.
+
+%Authors: Give initials and family name of all authors.
+
+%(Please refer to the section ‘To accompany manuscript at submission’ for more details regarding authorship entitlements)
+%NB - A declaration of Author’s roles is required at submission and this information MUST be included in the manuscript (after the discussion, before the Acknowledgements).
+%Author affiliations and addresses: The department, institution, city and country should be given with postal code for each author. An e mail address will be published for the corresponding author, who should be clearly identified with an asterisk. Current addresses should be provided for all authors.
+
+% title goes here:
+\title{Prioritization of putatively detrimental variants in euploid miscarriages}
+%Running title: Should not exceed 50 characters.
+\author[1+]{Silvia Buonaiuto}
+\author[2+]{Imma Di Biase}
+\author[3]{Valentina Aleotti}
+\author[3]{Amin Ravaei}
+\author[4]{Adriano De Marino}
+\author[1]{Gianluca Damaggio}
+\author[5]{Marco Chierici}
+\author[6]{Madhuri Pulijala}
+\author[2]{Palmira D’Ambrosio} 
+\author[2]{Gabriella Esposito}
+\author[6]{Qasim Ayub}
+\author[5]{Cesare Furlanello}
+\author[4]{Antonio Capalbo}
+\author[x]{Pantaleo Greco}
+\author[3]{Michele Rubini}
+\author[2]{Sebastiano Di Biase}
+\author[1*]{Vincenza Colonna}
+%\author[]{{\color{blue} nomi memorial exomes} }
+\affil[1]{Affiliation, department, city, postcode, country}
+\affil[2]{Affiliation, department, city, postcode, country}
+\affil[*]{Correspondence: vincenza.colonna@igb.cnr.it}
+\affil[+]{these authors contributed equally to this work}
+\setcounter{Maxaffil}{0}
+\renewcommand\Affilfont{\itshape\small}
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% document begins here
+\begin{document}
+\maketitle
+\newpage
+\include{sections/abstract}
+\include{sections/keywords}
+\include{sections/intro}
+\include{sections/matmet}
+\include{sections/results}
+\include{sections/discussion}
+\include{sections/endings}
+
+\bibliographystyle{humanReproduction} 
+\bibliography{biblio.bib}
+
+%\include{sections/tables}
+\include{sections/figLegends}
+\include{sections/figures}
+
+
+\beginsupplement
+\section*{Supplementary Information}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection*{Supplementary Tables}
+%\include{supptables}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Supplementary Figures}
+\include{sections/suppfig}
+%\include{sections/supptab}
+
+
+\end{document}
