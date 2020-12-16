@@ -3,46 +3,42 @@
 %The discussion should begin with a succinct statement of the principal findings, outline the strengths and weaknesses of the study, discuss the findings in relation to other studies and the wider (clinical) relevance of the findings, provide possible explanations and indicate questions which remain to be answered in future research.
 
 %%%%%%%%%%%%%%%%%%%%%%%%% restatement of your research question, followed by a statement about whether or not, and how much, your findings "answer" the question. 
-Miscarriages are frequent events with a complex aetiology whose genetic components have not been completely understood. Here we develop a scalable pipeline that investigates genetic variation scantily considered in the context of miscarriages. Currently, genetic analyses of miscarriages mostly focuses on detecting chromosomal aneuploidies and large chromosomal aberrations (which explain less than half of the cases) leaving unexplored small size genetic variants, the most abundant type of genomic variation. To some extent small genetic variants have been considered in a number of cases that performed target resequencing of candidate genes, a valid but not systematic approach that does not fully exploit genomic information. 
+Miscarriages are frequent events with a complex aetiology whose genetic components have not been completely understood. We developed a scalable pipeline that investigates genetic variation scantily considered in the context of miscarriages. We use our pipeline to analyze coding regions of the genome of ten miscarried euploid embryos to prioritize putatively detrimental variants in genes that are relevant for embryonic development. 
 
-We developed\gp, a pipeline that prioritized 439 putatively causative variants starting form 11M variants discovered by whole-genome sequencing ten euploid  miscarried embryos. Through systematic investigation of all coding regions \gp selected about 47 genes per embryo taking into account the properties of the genetic variants within genes and prior knowledge of genes implicated in miscarriages. By manual curation of the selected genes we highlight a few cases among which three cases of great relevance for embryonic development. \textit{STAG2} is known in literature for its role in cancer, congenital, and developmental disorders through X-linked recessive patterns of inheritance. \textit{TLE4} is found to interact with the genomic region on chromosome 9 that has been associated with prevalence of miscarriages in a genome-wide study on mothers. \textit{TLE4} appears to be a key gene in embryonic development, as it is expressed in both embryonic and extraembrionc tissues where it participates in the Wnt and Notch pathways. Finally, \textit{FMNL2} is involved in cell motility with a major role in driving cell migration.  
+Our pipeline prioritized 439 putatively causative single nucleotide polymorphisms among 11M variants discovered in the ten embryos. Through systematic investigation of all coding regions \gp selected about 47 genes per embryo and by manual curation of the selected genes we highlight a few cases. Among them three cases of great relevance for embryonic development. An hemyzygous splice site mutation in one male embryo on \textit{STAG2}, known in literature for its role in congenital and developmental disorders as well as in cancer. An missense mutation is \textit{TLE4}, a gene that interacts with the genomic region on chromosome 9 genetically associated with miscarriages in a genome-wide study on mothers. \textit{TLE4} appears to be a key gene in embryonic development, as it is expressed in both embryonic and extraembryonic tissues where it participates in the Wnt and Notch signalling pathways. Finally, a 4-bp haplotype in five embryos, containing a stop gain and a missense mutations in \textit{FMNL2}, a gene involved in cell motility with a major role in driving cell migration. The stop gain mutation truncates the protein well before the main functional domain of FMNL2, i.e. the domain that binds the actin filaments, therefore causing a complete loss of function  of the protein product.    
 
+%%%%%%%%%%%%%%%%%%%%%Relate your findings to the issues you raised in the introduction. Note similarities, differences, common or different trends.  Show how your study either corroborates, extends, refines, or conflicts with previous findings.
+In this study we focus on single nucleotide variants. \gp combines functional information on variants and genes with population genomics and literature information to sift millions of variants in search for the relevant ones. This approach closes a gap as genetic analyses of miscarriages mostly focused on detecting chromosomal aneuploidies and large chromosomal aberrations (which explain less than half of the cases) leaving unexplored small size genetic variants, the most abundant type of genomic variation. To some extent small genetic variants have been considered in a number of cases that performed target resequencing of candidate genes, a valid but still not systematic approach because it does not fully exploit genomic information as instead \gp does.
 
-%%%%%%%%%%%%%%%%%%%%%Relate your findings to the issues you raised in the introduction. Note similarities, differences, common or different trends.  Show how your study either corraborates, extends, refines, or conflicts with previous findings.
-%discuss the findings in relation to other studies and the wider (clinical) relevance of the findings,
-Compared to previous similar studies our work focuses on a systematic exploration of the genome that combines previous knowledge (through the use of list of candidate genes) with hypothesis-free prioritization, 
+\gp units of analysis are transcripts and genes with no prior hypothesis on genes, but at the same time \gp includes literature knowledge on miscarriages by the use of lists of genes in Filter I. As a result our approach is robust to both discovery of novel association and investigation of genes with known association to miscarriages overcoming the major limitation of candidate genes studies. 
 
+Variant prioritization is done at individual levels. While we expect that the same gene might be the cause of miscarriages, we do not expect that the same exact mutation was causing the gene's loss of function especially with limited sample size. Therefore, by filtering at individual's level \gp accounts for interindividual variation, i.e. the larger fraction of genomic variability, as well as for the high chance of occurrence of \textit{de novo} mutations. Nevertheless, \gp selected in five embryos the exact same combination of two linked alelles in \textit{FMNL2}, showing that while individual-based it is still capable of finding variants shared by more than one case as these two not too rare polymorphisms. 
 
-make it robust to discovery of mutations in genes known to be associated but also to the identification of novel genes. 
-
-
+%Our study uses as system model genomic DNA from embryos
 
 %%%%%%%%%%%%%%%%%%%%%outline the strengths and weaknesses of the study,
-Our pipeline is reproducible and easy to scale to larger number. It includes a control population to filter out genes that can be prioritized by chance and it is suitable for cases where it is not possible to rely on a large enough number of sample to performs association analysis. 
+Our pipeline is reproducible and easy to scale to larger number and different phenotypes. It includes a control population to filter out genes that can be prioritized by chance and it is suitable for cases where it is not possible to rely on an adequate number of samples to performs association analysis. We use as a model system the embryos. Compared to studies on parents here we can see what was actually, compared to what can be potentially transmitted, therefore increasing the accuracy of the results. Further future integration of genomic information on parents (not available in this case collection) will allow to infer the inheritance mechanisms and distinguish between \textit{de novo} and recessive mutations, with implications also on clinical application of the results. %The major limitation of this study are 
 
 
--- model system 
-
-
--- weakness, exclude non-coding and intermediate size sv 
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%% If you have unexpected findings, try to interpret them in terms of method, interpretation, even a restructured hypothesis; in extreme cases, you may have to rewrite your introduction. Be honest about the limitations of your study.
-
-
-
+%%%%%%%%%%%%%%%%%%%%%%% If you have unexpected findings..   making even more effective the   ixpected findings, try to interpret them in terms of method, interpretation, even a restructured hypothesis; in extreme cases, you may have to rewrite your introduction. Be honest about the limitations of your study.
+  
 %%%%%%%%%%%%%%%%%%%%%State the major conclusions from your study and present the theoretical and practical implications of your study.
+In conclusion, this exploratory study demonstrates that filtering and prioritizing is effective in identifying genomic variants putatively responsible for miscarriages and provides indications and tools for developing a larger study.  Compared to previous similar studies our work focuses on a systematic exploration of the genome that combines previous knowledge with hypothesis-free prioritization, make it robust to discovery of mutations in genes known to be associated but also to the identification of novel genes. Our approach accounts for properties and limitation of the study system.
 
+
+%%%%%%%%%%%%%%%%%%%%%discuss the findings in relation to other studies and the wider (clinical) relevance of the findings,
+Our findings have wide clinical implications. While being a proof of concept study, it already produced valid indications on genes that can be used to test genetic predisposition to miscarriages in parents that are planning to conceive or in preimplantation genetic testing. In a more wide context, results of this study might be relevant for genetic counseling and risk management in miscarriages
+
+
+%We estimated that 32.6\% of collected samples are suitable for sequencing, the rest presenting aneuploidies or quality issues and maternal contamination.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%Discuss the implications of your study for future research and be specific about the next logical steps for future researchers.
--- burden analysis larger sample of embryos 
+Future development will include the extension of the analysis to non-coding regions and to structural variants, as well as the enrollment of trios to fully exploit parental information.  
 
 
+%-- risk assessment
 
--- risk assessment
 
-
--- larger scale project 
+%-- larger scale project 
 
 
 %Here we want to understand the requirements for large scale population-based study of genomic sequences of unrelated miscarriages focused at dechipering the contribution of small-size mutation 

@@ -13,26 +13,41 @@
 
 \subsection*{\textsc{Study question:}} 
 %[A SINGLE question (ending in a question mark), limited to the PRIMARY objective of the study ONLY (do not include secondary questions)]
+Do prioritization of genomic variants based on their functional features informs on genes putatively causative and clarify the impact of small-size genetic variants in the study of genome of euploid embryos from pregnancy losses? (SPECIFICO)  
+
+OPPURE 
+
+Do the analysis of genome sequences of euploid embryos from pregnancy loss informs on genes putatively causative of the miscarriage and clarify the impact of small-size genetic variants? (GENERICO) 
+
+%Miscarriages are frequent events with a complex aetiology whose genetic components have not been completely understood. We developed a scalable pipeline that investigates genetic variation scantily considered in the context of miscarriages. We use our pipeline to analyze coding regions of the genome of ten miscarried euploid embryos to prioritize putatively detrimental variants in genes that are relevant for embryonic development.
 
 \subsection*{\textsc{Summary answer:}}  
 %[The main conclusion. A single sentence, this should be limited to the primary results of the study, without any discussion of their implications]
+Filtering and prioritizing genetic variants is effective in identifying genomic variants putatively responsible for miscarriages. 
 
 \subsection*{\textsc{What is known already:}} 
 %[One or two short sentences] 
+%100 Pregnancy Loss (PL), the spontaneous demise of a pregnancy before 24 weeks of gestation, occurs in 10-15\% of pregnancies. 
+Miscarriage is often the result of chromosomal aneuploidies of the gametes but it can also have non random genetic causes like small-size mutations, both \textit{de novo} or inherited from parents, that have been scantily investigated so far. Analysis of genomic sequences of miscarried embryos has been mostly focusing on rare variation, and carried out using quite non homogeneous criteria and methods that are difficult to reproduce. 
 
 \subsection*{\textsc{Study design, size, duration:}} 
 %[Cross sectional – control versus treatment, longitudinal –time-course, age-course. Numbers of treated/controls, treatment duration, sampling procedures]
-
+This is a monocentric observational study. The study includes the data analysis of 46 embryos obtained from women experiencing pregnancy loss recruited by the University of Ferrara from 2017 to 2018. The study was approved by the Ethical committee of Emilia-Romagna CE/FE #170475. 
+ 
 \subsection*{\textsc{Participants/materials, setting, methods:}} %[General approach used eg cell/tissue culture/transfection, animal treatments/models, transgenesis. Species, ages, gender, cell type. Methods and endpoints used – eg hormone, cytokine, growth factor measurements, cell numbers/proliferation, tissue morphology/composition, FACS, immunohistochemistry, Westerns, quantitative PCR, FISH]
+Participants are forty-six women, mostly European (87\%) diagnosed with first (n=25, av.age 32.7 ) or recurrent (n=21, av.age 36.5) miscarriage. Embryonic DNA was prepared form chorionic villi and used to select euploid embryos using quantitative PCR, comparative genomic hybridiztion and shallow sequencing of random genomic regions. Euploid embryos were whole-genome sequenced at 30X using Illumina short reads technology and genomic sequences used to identify genetic variants. Variants were annotated integrating information from Ensembl100 and literature knowledge on genes associated with embryonic development, miscarriages, lethality, cell cycle. Following annotation, variants were filtered to prioritize putatively detrimental variants in genes that are relevant for embryonic development using a pipeline that we developed. The code is available on gitHub (ezcn/grep).
 
 \subsection*{\textsc{Main results and the role of chance:}} 
 %[P values, biological gradient, repeatability/robustness, mechanisms identified/involved]
+Our pipeline prioritized 439 putatively causative single nucleotide polymorphisms among 11M variants discovered in ten embryos. Systematic investigation of all coding regions selected about 47 genes per embryo. Among them \textit{STAG2}, known in literature for its role in congenital and developmental disorders as well as in cancer, \textit{TLE4} a key gene in embryonic development, expressed in both embryonic and extraembryonic tissues in the Wnt and Notch signalling pathways, and \textit{FMNL2}, involved in cell motility with a major role in driving cell migration. Our results are fully reproducible (the code is open-source) and robust, as we exclude genes with $>$5\% chance to be selected in a control population.  
 
 \subsection*{\textsc{Limitations, reasons for caution:}} 
 %[Descriptive, only in vitro, cell transfection, shown only in one species, technical limitations and reasons for caution, cell/animal lethality in a knock-out, disease- or cell-specificity]
+Despite producing encouraging results, this pilot study has major limitations in sample size and lack of integration of the parental genomic information. %
 
 \subsection*{\textsc{Wider implications of the findings :}} 
 %[Agreement/disagreement with literature, resolution of previous disparity, new insights/mechanisms in disease(s), new therapeutic potential, cell-, species- gender-, or age-implications, relevance to other systems]
+This pilot study demonstrate that analysis of genome sequencing can help to clarify the causes of idiopathic miscarriages and provides initial results from the analysis of ten euploid embryos. We discovered plausible candidate genes and variants and provides essential indications to scale to a larger study. Results of this and following wider studies can be used to test genetic predisposition to miscarriages in parents that are planning to conceive or in preimplantation genetic testing. In a more wide context, results of this study might be relevant for genetic counseling and risk management in miscarriages
 
 \subsection*{\textsc{Study funding/competing interest(s):}} %Trial registration number: a trial registration number is only required for clinical trials.
 
