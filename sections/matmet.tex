@@ -8,14 +8,13 @@
 \subsection*{Embryo data and samples collection}
 Cases were recruited at the Unit of Obstetrics and Gynecology of the Sant’Anna University Hospital in Ferrara, Italy, from 2017 to 2018. The study protocol was approved by the local Ethical Board (CE/FE 170475). All participants provided written informed consents before entering the study.
 
-The inclusion criteria were: age between 18 and 42 years and gestational age up to 12 weeks. Exclusion criterion was any clinical condition that could prevent full-term pregnancies. Known causes of pregnancy losses were excluded by standard diagnostic protocol including hysteroscopy, laparoscopy, ultrasound, karyotype analysis, detection of immunological risk factors (anticardiolipin, lupus anticoagulant, antinuclear antibodies) and hormonal status (gonadotrophins, FSH, LH, prolactin, thyroid hormones, thyroperoxidase) before inclusion in the study. Gestational weeks were calculated from the last menstrual period. Demographic, antropometric and clinical data of cases, including obstetric history, family history of malformations, and periconceptional supplementation with folic acid, were anonymized and linked to biological samples by coding. Data cleaning, refining, and analysis (summary statistics, hypothesis testing) were performed using R \cite{R}.
+The inclusion criteria were: age between 18 and 42 years and gestational age up to 12 weeks. Exclusion criterion was any clinical condition that could prevent full-term pregnancies. Known causes of pregnancy losses were excluded by standard diagnostic protocol including hysteroscopy, laparoscopy, ultrasound, karyotype analysis, detection of immunological risk factors (anticardiolipin, lupus anticoagulant, antinuclear antibodies) and hormonal status (gonadotrophins, FSH, LH, prolactin, thyroid hormones, thyroperoxidase) before inclusion in the study. Gestational weeks were calculated from the last menstrual period. Demographic, antropometric and clinical data of cases, including obstetric history, family history of malformations, and periconceptional supplementation with folic acid, were anonymized and linked to biological samples by coding. 
 
 
-\subsection*{DNA preparation} 
+\subsection*{DNA preparation and sequencing} 
 Retained product of conception was removed from uterus using a suction curette, and chorionic villi (CV) were carefully dissected from decidual tissue. We used dry homogenization after exploring a range of possibilities (Figure \ref{fig:dna}A). 
 Genomic DNA was extracted from CV samples using QIAamp DNA Mini Kit (Ref: 51304, Qiagen) according to manufacturer’s protocol after considering the yeld two types of resin and one membrane (Figure \ref{fig:dna}B). DNA was titrated using Qubit 2.0 Fluorometer (Life Technologies).
-
--- Maternal contamination 
+Whole-genome sequencing of the genomic DNA extracted from chorionic villi was done through a service provider (Macrogen s.r.l). In particular, libraries for sequencing were prepared using the Illumina TruSeq DNA PCR-free Library (insert size 350bp) and samples were sequenced at 30X mapped (110Gb) 150bp PE on HiSeqX. 
 
 %Samples collection was done by the Unit of Obstetrics and Gynecology of the Sant’Anna University Hospital in Ferrara, Italy, from 2016 to 2020. It was approved by the local Ethical Committee (approval number CE/FE 170475) and carried out in compliance with the Helsinki Declaration. All participants provided written informed consents before recruitment. The inclusion criteria were: age in the range 18–42 years; gestational age within the first 12 weeks. Maximum gestational age for cases of voluntary termination of pregnancy was ninety days, according to the Italian law, namely Bill 194, Article 4. 
 
@@ -30,33 +29,48 @@ Genomic DNA was extracted from CV samples using QIAamp DNA Mini Kit (Ref: 51304,
 
 
 \subsection*{Detection of chromosomal aneuploidies in embryos} 
-\subsubsection*{Detection of sex and numerical anomalies through quantitative PCR}
-A rapid screening of sex and anuploidies for chromosomes 13, 15, 16, 18, 21, 22 and X was carried out on geomic DNA extracted from the chorionic villi performing five multiplex PCR assays. PCR assays A, B 1,2 and 3 were performed in a total volume of 25μl containing 40–100ng of genomic DNA, 10mM dNTP (Roche), 6-30 pmol final concentration of each primer, 1×Fast taq polymerase buffer (15mmol/l MgCl 2 ) (Roche), and 2.5 U of Fasta taq polymerase (Roche). PCR conditions were as follows: denaturation at 95\textdegree C for 10 min followed by 10 cycles consisting of melting at 95\textdegree C for 1 min, annealing at 65\textdegree C (-1\textdegree C / cycle) for 1 minutes, and then extension at 72\textdegree C for 40 seconds, then for 23 cycles at 95\textdegree C for 1 min, 55\textdegree C for 1 min, and 72\textdegree C for 1 min. Final extension was for 10min at 72\textdegree C and at 60\textdegree C for 60 min. Fluorescence-labelled PCR products were electrophoresed in an CEQ 8000 Backman by combining 40 μl of Hi-Di Formamide and 0.5 μl of DNA size standard 400 (Backman); PCR products were visualized and quantified as peak areas of each respective repeat lengths. In normal heterozygous subjects, the QF- PCR product of each STR should show two peaks with similar fluorescent activities and thus a ratio of peak areas close to 1:1 (ranging from 0.8 to 1.4:1). A trisomy is suspected when the ratio is  above or below this range (peak area ratios ≤ 0.6 and ≥ 1.8, trisomic diallelic pattern), otherwise there are three alleles of equal peak area with a ratio of 1:1:1 (trisomic triallelic). The presence of trisomic triallelic or diallelic patterns for at least two different STRs on the same chromosome is considered as evidence of trisomy. Trisomic patterns observed for all chromosome-specific STRs are indicative of triploidy. Therefore accurate X chromosome dosage, to perform diagnosis of X monosomy, can be assessed by TAF9L marker allowing This gene has a high degree of sequence identity between chromosome 3 and chromosome X; primers on this gene amplify a 3 b.p. deletion generating a chromosome X specific product of 141 b.p. and a chromosome 3 specific product of 144 b.p.
+%\subsubsection*{Detection of sex and numerical anomalies through quantitative PCR}
+A rapid screening of sex and anuploidies for chromosomes 13, 15, 16, 18, 21, 22 and X was carried out on geomic DNA extracted from the chorionic villi performing five multiplex Quantitative Fluorescent PCR (QFPCR) assays. QFPCR assays A, B 1,2 and 3 were performed in a total volume of 25μl containing 40–100ng of genomic DNA, 10mM dNTP (Roche), 6-30 pmol final concentration of each primer, 1×Fast taq polymerase buffer (15mmol/l MgCl 2 ) (Roche), and 2.5 U of Fasta taq polymerase (Roche). QFPCR conditions were as follows: denaturation at 95\textdegree C for 10 min followed by 10 cycles consisting of melting at 95\textdegree C for 1 min, annealing at 65\textdegree C (-1\textdegree C / cycle) for 1 minutes, and then extension at 72\textdegree C for 40 seconds, then for 23 cycles at 95\textdegree C for 1 min, 55\textdegree C for 1 min, and 72\textdegree C for 1 min. Final extension was for 10min at 72\textdegree C and at 60\textdegree C for 60 min. Fluorescence-labelled QFPCR products were electrophoresed in an CEQ 8000 Backman by combining 40 μl of Hi-Di Formamide and 0.5 μl of DNA size standard 400 (Backman); QFPCR products were visualized and quantified as peak areas of each respective repeat lengths. In normal heterozygous subjects, the QFPCR product of each STR should show two peaks with similar fluorescent activities and thus a ratio of peak areas close to 1:1 (ranging from 0.8 to 1.4:1). A trisomy is suspected when the ratio is  above or below this range (peak area ratios ≤ 0.6 and ≥ 1.8, trisomic diallelic pattern), otherwise there are three alleles of equal peak area with a ratio of 1:1:1 (trisomic triallelic). The presence of trisomic triallelic or diallelic patterns for at least two different STRs on the same chromosome is considered as evidence of trisomy. Trisomic patterns observed for all chromosome-specific STRs are indicative of triploidy. Therefore accurate X chromosome dosage, to perform diagnosis of X monosomy, can be assessed by TAF9L marker allowing This gene has a high degree of sequence identity between chromosome 3 and chromosome X; primers on this gene amplify a 3 b.p. deletion generating a chromosome X specific product of 141 b.p. and a chromosome 3 specific product of 144 b.p. Maternal contamination was also checked by QFPCR comparing the alleles found in miscarriages with those found in maternal blood. %Samples with $>$20\% contamination were not included in the study.
 
-\subsubsection*{Comparative Genomic Hybridization} 
--- MERIGEN Agilent SurePrint G3 CGH-only. Log-ratio produced by the Agilent CytoGenomics v3.0.4 software 
 
-Beside the Agilent software XXX , data were analyzed using custom R scripting (Figure \ref{fig:cnvmethods}). The LogRatio from the arrays were segmented into regions of estimated equal copy number using both the method implemented in the Agilent, and the Penalized least square implemented in the R package Copynumber (PLS, \cite{nilsen2012copynumber}) and classified as copy number of gains or losses (copy number variants, CNV) using as criteria at least five probes and Zscore $<$0.0016 (SD*4)\cite{vermeesch2005molecular}. 
+%\subsubsection*{Comparative Genomic Hybridization} 
+%-- MERIGEN Agilent SurePrint G3 CGH-only. Log-ratio produced by the Agilent CytoGenomics v3.0.4 software 
+
+Comparative Genomic Hybridization was carried out using the Agilent SurePrint G3 Human CGH Microarray. Samples underwent DNA quantification and quality analysis prior to be labeled and hybridized on the microarray. Following hybridization samples were washed and the chip was scanned at 3 microns using the Agilent SureScan Microarray Scanner. The LogRatio from the arrays were segmented into regions of estimated equal copy number using both the method implemented in theAgilent CytoGenomics V3.0.4 software, and the Penalized least square implemented in the R package Copynumber (PLS, \cite{nilsen2012copynumber}). Classification as copy number of gains or losses (copy number variants) was done using as criteria at least five probes and Zscore $<$0.0016 (SD*4)\cite{vermeesch2005molecular}. 
  %Circular Binary Segmentation (CBS)\cite{Venkatraman2018}, 
+ 
+ %First using the Feature Extraction (part of Agilent CytoGenomics or Agilent Genomic Workbench) then seamlessly translates the resulting image into log ratios and uses advanced statistical analysis to associate these with correlative QC metrics. 
+%Results can be further analyzed and displayed for biological interpretation in Agilent CytoGenomics V3.0.4 software.
+%Microarray-based comparative genomic hybridization (array CGH) is a powerful method for the genome wide detection of chromosome copy number changes at a higher resolution level than conventional chromosome-based CGH.
+%The Agilent SurePrint G3 CGH Microarrays kit was used for this study.
+%following a six steps protocol is composed by 6 steps:
+%Step 1. DNA Quantitation and Quality Analysis 
+%Step 2. Sample Preparation 
+%Step 3. Sample Labeling 
+%Step 4. Microarray Hybridization 
+%Step 5. Microarray Washing 
+%Step 6. Microarray Scanning and Analysis 
+%SurePrint G3 CGH Microarrays are scanned at 3 microns using the Agilent SureScan Microarray Scanner. Feature Extraction (part of Agilent CytoGenomics or Agilent Genomic Workbench) then seamlessly translates the resulting image into log ratios and uses advanced statistical analysis to associate these with correlative QC metrics. 
+%Results can be further analyzed and displayed for biological interpretation in Agilent CytoGenomics V3.0.4 software.
 
 
 
-\subsection*{DNA sequencing and sequence analysis}
-Whole-genome sequencing of the genomic DNA extracted from chorionic villi was done through a service provider (Macrogen s.r.l). In particular, libraries for sequencing were prepared using the Illumina TruSeq DNA PCR-free Library (insert size 350bp) and samples were sequenced at 30X mapped (110Gb) 150bp PE on HiSeqX. 
+
+%\subsection*{DNA sequencing}
+
 %SILVIA We obtained XX GB of data per individual, with.95.8 of the genome covered more than XX times.
 
+\subsection*{Statistical and sequence analyses}
+Data cleaning, refining, and analysis (summary statistics, hypothesis testing) were performed using R \cite{R}.
 Reads in the fastq file sequence data were aligned against the reference genome GRChg38.p12 using \textsc{bwa}\cite{li2013aligning} and \textsc{samtools}\cite{li2011statistical}. Variant calling was done using \textsc{freebayes}\cite{garrison2012haplotype}. The resulting vcf files were refined in further steps: \textsc{vcffilter} \cite{vcflib} was used to filter variants for quality score$>$20, leaving only variants with 99\% accuracy of genotype call; \textsc{vt}\cite{tan2015unified} was used to normalize variants and deconstruct multiallelic variants. Refined vcf files were compressed and indexed using samtools \cite{li2011statistical}. Variants were annotated for functional effects and allele frequency in other populations using Variant Effect Predictor\cite{mclaren2016ensembl}. Phasing was done using Beagle 5.1\cite{browning2018one} under standard parameters.  
 
-
 Principal components analysis was done with PLINK\cite{chang2015second} using 1,2M autosomal SNPs. 
+
+The \gp pipeline for variant prioritization is written in Python and R and the code is publicly avaiable (\url{https://github.com/ezcn/grep}). The manually curated list of genes associated with miscarriages (recurrent and spontaneous) was obtained through a comprehensive search of the published literature. We considered seven studies highlighting the association of genes with miscarriages \cite{colley2019potential, fu2018whole, laisk2020genetic, pereza2017systematic, qiao2016whole, quintero2017novel, rull2012genetics}. This compendium was further supplemented by genes from curated repositories such as Human Phenotype Ontology (HPO) [Robinson et al., 2008; URL: https://hpo.jax.org/app/browse/term/HP:0200067 last accessed: 1/12/2020 11:01:00 PM] and DisGeNET [Piñero et al., 2015; URL: http://www.disgenet.org/search last accessed: 1/12/2020 11:12:00 PM]. The search terms used were “recurrent miscarriages”, “abortion”, “spontaneous abortion”, and “recurrent spontaneous abortion”. After filtering by removing the duplicates, combining the gene sets obtained from the literature and databases yielded a total of 608 unique genes. Additional information of genes such as HGNC symbol, HGNC ID, Gene Stable ID, Chromosomal coordinates (GRChg38), karyotype band, transcript count, protein stable ID were extracted from Ensembl Biomart\cite{kinsella2011ensembl}. %[Kinsella et al., 2011, Yates et al., 2020]. %Furthermore, Haploinsufficiency score (HI index) and Loss Intolerance (pLI) values of all the genes were compiled from DECIPHER [Firth et al., 2009] and gnomAD [Karczewski et al., 2020] respectively. 
+
 Overrepresentation tests and protein classification were performed using the R package ReactomePA\cite{yu2016reactomepa}.  
 
-
-The \gp pipeline for variant prioritization is written in Python and R and the code is publicly avaiable (\url{https://github.com/ezcn/grep}). 
-
-
 The computational work has been executed on the IT resources of the ReCaS-Bari data center, which have been made available by two projects financed by the MIUR (Italian Ministry for Education, University and Re-search) in the \textit{PON Ricerca e Competitività 2007-2013" Program: ReCaS (Azione I - Interventi di rafforzamento strutturale, PONa3\_00052, Avviso 254/Ric) and PRISMA (Asse II - Sostegno all'innovazione, PON04a2\_A)}
-
 
 
 
